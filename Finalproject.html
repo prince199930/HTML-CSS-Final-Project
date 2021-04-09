@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuuk Webapp</title>
+    <script src="https://kit.fontawesome.com/fa783a8110.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Noto+Sans+JP:wght@100&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Dosis', sans-serif;
+            margin-top: 2%;
+            margin-right: 3.5%;
+            margin-left: 2%;
+            color: #121213;
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        p {
+            font-weight: 400;
+        }
+
+        #banner {
+            position: relative;
+            height: 85vh;
+            padding-right: 5%;
+            padding-left: 5%;
+            background-color: #c1c3cc;
+            background-image: linear-gradient(76deg, rgba(193, 195, 204, 0.83) 35%, rgba(193, 195, 204, 0.28) 65%), url(https://nuuk-e3eaa.firebaseapp.com/assets/img/slide-2.jpg);
+            background-position: 0px 0px, 50% 0%;
+            background-size: auto, cover;
+            background-attachment: scroll, fixed;
+        }
+
+        .navigation {
+            position: absolute;
+            width: 69%;
+            height: 70px;
+            background-color: #fff;
+            margin-top: 2%;
+            margin-left: 11%;
+        }
+
+        .logo {
+            position: absolute;
+            margin-top: 2%;
+            margin-left: 0%;
+            background-color: #e47312;
+            height: 87px;
+            width: 11%;
+        }
+
+        .logo-img {
+            width: 61%;
+            padding-top: 33px;
+            padding-left: 29px;
+        }
+
+        .POPBUTTON {
+            position: absolute;
+            width: 11%;
+            height: 70px;
+            background-color: #e47312;
+            margin-top: 2%;
+            margin-left: 80%;
+        }
+
+        #button {
+            color: white;
+            font-size: 9px;
+            font-weight: bold;
+            padding-top: 16px;
+            padding-left: 23px;
+        }
+
+        .Menu {
+            position: relative;
+            padding-bottom: 0px;
+            padding-right: 24px;
+            float: right;
+            background-color: #fff;
+        }
+
+
+        .nav-bar {
+            outline: none;
+            text-decoration: none;
+            padding: 28px 14px;
+            color: #414147;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .w--current {
+            color: #e47312;
+        }
+
+        .nav-bar:hover {
+            color: #e47312;
+        }
+
+
+        .heading {
+            width: 635px;
+            color: #fff;
+            font-size: 65px;
+            line-height: 274px;
+            margin-bottom: -27px;
+            margin-left: 27px;
+            letter-spacing: 1px;
+            font-weight: bold;
+            text-transform: uppercase;
+            height: 188px;
+
+        }
+
+        .para {
+            position: absolute;
+            font-size: 16px;
+            color: #fff;
+            margin-left: 27px;
+        }
+
+        .dropbtn {
+            color: #414147;
+            background-color: #fff;
+            font-size: 10px;
+            font-weight: 700;
+            border: none;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        #drop {
+            width: 7px;
+            padding-top: 31px;
+            padding-left: 7px;
+        }
+
+        .top-tittle1 {
+            width: 63%;
+            margin-top: 0px;
+            padding-top: 73px;
+        }
+
+        .quote {
+            margin-top: 72px;
+            margin-left: 27px;
+        }
+
+
+        .mic {
+            position: relative;
+            margin-top: -115px;
+            margin-right: -65px;
+            background-color: black;
+            height: 222px;
+        }
+
+        .links {
+            color: white;
+            padding: 11px;
+            width: 40px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 15px;
+            height: 7px;
+            padding-top: 23px;
+        }
+
+        hr.hr-text {
+            position: relative;
+            border: none;
+            height: 1px;
+            background: #999;
+            width: 31px;
+        }
+
+        .QUOTES {
+
+            background-color: #e47312;
+            text-align: center;
+            color: #fff;
+            width: 11%;
+            margin-top: 55px;
+            height: 22px;
+            margin-left: 29px;
+            font-size: 10px;
+            padding: 9px;
+            cursor: pointer;
+        }
+
+        .QUOTES:hover {
+            background-color: rgb(226, 140, 65);
+            transition-delay: 2ms;
+        }
+
+        .bottom-nav {
+            display: flex;
+            height: 181px;
+            width: 73%;
+            float: right;
+            position: relative;
+            margin-top: 107px;
+            margin-right: -66px;
+            background-image: linear-gradient(to top right, #fd645a, #e67218);
+        }
+
+        .st {
+            width: 33%;
+            text-align: center;
+            font-size: 11.5px;
+            color: #fff;
+            padding-top: 31px;
+            letter-spacing: 1px;
+        }
+
+        .ff {
+            font-size: 18px;
+        }
+
+        #services-section {
+            margin-top: 120px;
+        }
+
+        .Services-tittle {
+            font-size: 86px;
+            padding-left: 63px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgba(241, 241, 247, 0.4);
+            z-index: 1;
+            margin-top: -15px;
+        }
+
+        .Our-tittle {
+            margin-top: 0px;
+            position: relative;
+            padding-left: 113px;
+            top: 35px;
+            z-index: 2;
+        }
+
+        .view {
+            display: inline-block;
+            float: right;
+            margin-top: -59px;
+            margin-right: 81px;
+            font-size: 8px;
+            color: #919198;
+            letter-spacing: 1px;
+        }
+
+        .view-para {
+            font-size: 8px;
+            color: #919198;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+
+        .view hr {
+            width: 0px;
+        }
+
+
+        .view-para hr:hover {
+            width: 24px;
+        }
+
+        #specialization {
+            width: 86%;
+            display: flex;
+            margin-left: 8%;
+            margin-right: 8%;
+        }
+
+        .section-specialization {
+            width: 25%;
+            font-size: 12px;
+            margin-left: 60px;
+        }
+
+        .section-specialization img {
+            width: 51px;
+            margin-left: -10px;
+        }
+
+        .ss {
+            font-weight: bold;
+        }
+
+        .sp {
+            color: #aeb2c6;
+            font-size: 17px;
+            margin-bottom: 17px;
+            line-height: 25px;
+        }
+
+        .lm {
+            color: #aeb2c6;
+            font-size: 12px;
+        }
+
+        .lm:hover {
+            text-decoration: underline;
+            color: #fd645a;
+        }
+
+        #ABOUT {
+            margin-top: 115px;
+            display: flex;
+            width: 100%;
+        }
+
+        .about-img {
+            width: 199%;
+            margin-left: 8%;
+
+        }
+
+        .about-second {
+            margin-left: 8%;
+            margin-right: 6%;
+        }
+
+        .aa {
+            font-size: 86px;
+            padding-left: -4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgba(241, 241, 247, 0.4);
+            z-index: 1;
+            margin-top: -15px;
+        }
+
+        .aw {
+            margin-top: 0px;
+            position: relative;
+            padding-left: 63px;
+            top: 35px;
+            z-index: 2;
+        }
+
+        .about-second p {
+            color: #aeb2c6;
+            font-size: 17px;
+            line-height: 25px;
+        }
+
+        #aboutsec-data {
+            width: 100%;
+            display: flex;
+            column-gap: 12%;
+            padding-left: 8%;
+            box-sizing: border-box;
+            margin-top: 8%;
+        }
+
+        .data {
+            width: 12%;
+            font-weight: 500;
+        }
+
+        #aboutsec-data h1 {
+            color: orangered;
+            font-size: 45px;
+        }
+
+        .data p {
+            font-size: 17px;
+            line-height: 25px;
+            color: #aeb2c6;
+        }
+
+        .pa {
+            font-size: 143px;
+            padding-left: 7%;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgba(241, 241, 247, 0.4);
+            z-index: 1;
+            margin-top: -15px;
+        }
+
+        .ph {
+            margin-top: 39px;
+            position: relative;
+            padding-left: 134px;
+            top: 35px;
+            z-index: 2;
+            font-size: 38px;
+            margin-bottom: -38px;
+        }
+
+        #PROJECTS {
+            background-color: #f7f8fc;
+            margin-top: 9.7%;
+        }
+
+        .sec-view {
+            display: inline-block;
+            float: right;
+            margin-top: -95px;
+            margin-right: 81px;
+            font-size: 8px;
+            color: #919198;
+            letter-spacing: 1px;
+        }
+
+        .sec-viewpara {
+            font-size: 14px;
+            color: #919198;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+
+        .view hr {
+            width: 0px;
+        }
+
+
+        .view-para hr:hover {
+            width: 24px;
+        }
+
+        .all-im {
+            display: flex;
+            column-gap: 23px;
+            grid-template-columns: auto auto auto;
+        }
+
+
+        .great-together {
+            width: 100%;
+            box-sizing: border-box
+        }
+
+
+        .gt-im img {
+            width: 102%;
+            box-sizing: border-box;
+            margin-left: -14px;
+        }
+
+        #worker {
+
+            position: relative;
+            height: 44vh;
+            color: white;
+            text-align: center;
+            background-image: linear-gradient(76deg, #e67118ec 25%, #fd655aec 75%), url(https://nuuk-e3eaa.firebaseapp.com/assets/img/banner-2.jpg);
+
+            background-position: 0px 0px, 50% 0%;
+            background-size: auto, cover;
+            background-attachment: scroll, fixed;
+        }
+
+        .p-1 {
+            width: 22%;
+            background-image: url(https://nuuk-e3eaa.firebaseapp.com/assets/img/team-1.jpg);
+            background-position: -5px 2px, 0% 14%;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .p-2 {
+            width: 22%;
+            background-image: url(https://nuuk-e3eaa.firebaseapp.com/assets/img/team-2.jpg);
+            background-position: -5px 2px, 0% 14%;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .p-3 {
+            width: 22%;
+            background-image: url(https://nuuk-e3eaa.firebaseapp.com/assets/img/team-3.jpg);
+            background-position: -5px 2px, 0% 14%;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .p-4 {
+            width: 22%;
+            background-image: url(https://nuuk-e3eaa.firebaseapp.com/assets/img/team-4.jpg);
+            background-position: -5px 2px, 0% 14%;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .profs {
+            display: flex;
+            column-gap: 30px;
+            margin-left: 116px;
+            width: 84%;
+            height: 429px;
+        }
+
+        .p-info {
+            background-color: #fff;
+            margin-top: 308px;
+            height: 106px;
+
+        }
+
+        .p-info h4 {
+            font-size: 16px;
+            padding-top: 17px;
+            padding-left: 19px;
+        }
+
+        .p-info p {
+            padding-left: 19px;
+        }
+
+        .b-1 {
+            width: 27%;
+
+        }
+
+        .b-txt {
+            height: 49%;
+            color: white;
+            text-align: left;
+            background-image: linear-gradient(158deg, #e67118 25%, #fd655a 75%);
+            margin-top: -23px;
+            padding-top: 22px;
+            padding-left: 22px;
+        }
+
+        .b-txt a {
+            color: #fff;
+            text-decoration: none;
+            border-bottom: solid;
+        }
+
+        .b-txt p {
+            font-weight: 400;
+            letter-spacing: 1px;
+            font-size: 15px;
+        }
+
+        .new {
+            margin-top: -180px;
+            height: 171px;
+            background-color: #e47312;
+        }
+
+        .time {
+            height: 69px;
+            position: absolute;
+            margin-left: 20.7%;
+            width: 4.8%;
+            margin-top: -17.4%;
+            text-align: center;
+            background-image: linear-gradient(139deg, #e67118 25%, #fd655a 75%);
+            color: white;
+        }
+
+        .date {
+            background-color: #fff;
+            color: #aeb2c6;
+            height: 33px;
+            margin-top: -24px;
+        }
+
+        .date h2 {
+            padding-top: 6px;
+        }
+
+        .orange-box {
+            background-image: linear-gradient(139deg, #e67118 25%, #fd655a 75%);
+            color: white;
+            height: 192px;
+            width: 102%;
+            margin-left: -7px;
+        }
+
+        .trust {
+            display: flex;
+            justify-content: space-evenly;
+            width: 96%;
+            padding-top: 76px;
+        }
+
+        .trust p {
+            margin-top: 0px;
+        }
+
+        .trust a {
+            font-size: 29px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-2 {
+            width: 83%;
+            margin-left: 72px;
+            display: flex;
+            background-color: #0a1229;
+            color: #fff;
+            height: 524px;
+            padding: 72px;
+            column-gap: 97px;
+            padding-left: 50px;
+        }
+
+        .sabn {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ABN hr {
+            width: 57%;
+            margin-top: -26px;
+            background-color: #ff6361;
+            margin-left: 103px;
+        }
+
+        .ABN p {
+            width: 300px;
+            padding-bottom: 4px;
+            letter-spacing: 1px;
+        }
+
+        .ABN a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 12px;
+            padding-bottom: 11px;
+        }
+
+        .abn-img {
+            width: 152px;
+            height: 97px;
+            margin-top: 322px;
+            background-color: #e47312;
+        }
+
+        .abn-img img {
+            width: 79px;
+            padding: 41px;
+        }
+
+        #testimonials {
+            background-color: #f7f8fc;
+        }
+
+        .left-test {
+            padding-top: 116px;
+        }
+
+        .our-services p {
+            width: 48%;
+            font-weight: 400;
+            text-align: center;
+            margin: auto;
+            margin-right: 202px;
+        }
+
+        .our-servics-click {
+            width: 15%;
+            font-weight: 400;
+            text-align: center;
+            margin-top: 13px;
+            margin-left: 118px;
+
+        }
+
+        .riew {
+            display: flex;
+            flex-direction: column;
+            margin-left: 37px;
+        }
+
+        .riew2 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .riew-1 {
+            height: 201px;
+            width: 203px;
+            padding: 18px;
+            background-color: #fff;
+        }
+
+        .riew-2 {
+            height: 201px;
+            width: 203px;
+            padding: 18px;
+            margin-top: 31px;
+            background-color: #fff;
+        }
+
+        .riew-3 {
+            margin-top: 97px;
+            height: 201px;
+            width: 203px;
+            margin-left: 46px;
+            padding: 18px;
+            background-color: #fff;
+        }
+
+        .riew-4 {
+            margin-top: 31px;
+            height: 201px;
+            width: 203px;
+            margin-left: 46px;
+            padding: 18px;
+            background-color: #fff;
+        }
+
+        .right-text {
+            display: flex;
+            width: 25%;
+        }
+
+        .riew-align {
+            text-align: center;
+        }
+
+        .news {
+            margin-top: 334px;
+        }
+
+        .testimonial-coma {
+            position: relative;
+            display: flex;
+            width: 60px;
+            height: 60px;
+            justify-content: center;
+            align-items: stretch;
+            border-radius: 100%;
+            background-image: linear-gradient(8deg, #ff6361, #e47312);
+            opacity: 1;
+            color: #fff;
+            font-size: 80px;
+            line-height: 80px;
+            margin-top: -216px;
+            margin-left: 72px;
+        }
+
+        .testimonial-coma1 {
+            position: relative;
+            display: flex;
+            width: 60px;
+            height: 60px;
+            justify-content: center;
+            align-items: stretch;
+            border-radius: 100%;
+            background-image: linear-gradient(8deg, #ff6361, #e47312);
+            opacity: 1;
+            color: #fff;
+            font-size: 80px;
+            line-height: 80px;
+            margin-top: -230px;
+            margin-left: 72px;
+        }
+
+        .coma {
+            padding-top: 12px;
+        }
+
+        .ff {
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="banner">
+        <div class="logo">
+            <img class="logo-img" src="https://nuuk-e3eaa.firebaseapp.com/assets/img/logo-white.png" alt="NUUK">
+        </div>
+
+        <div class="navigation">
+            <div class="Menu">
+                <a class="nav-bar w--current" href="#">HOME</a>
+                <a class="nav-bar" href="#">PROJECTS</a>
+                <a class="nav-bar" href="#">ABOUT</a>
+                <a class="nav-bar" href="#">SERVICES</a>
+                <a class="nav-bar" href="#">BLOG</a>
+                <div class="dropdown">
+                    <button class="dropbtn">PAGES<img id="drop" src="./sort-down.svg" /></button>
+                    <div class="dropdown-content">
+                        <a href="#">404 ERROR PAGE</a>
+                        <a href="#">PROTECTED PAGE</a>
+                        <a href="#">STYLE GUIDE</a>
+                        <a href="#">LICENSING</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="POPBUTTON">
+            <p id="button">GET FREE QUOTE</p>
+        </div>
+        <div class="top-tittle1">
+            <p class="heading">YOU DREAM. WE CREATE.</p>
+            <p class="para">We turn your ideas to reality, we don't stop until you're satisfied</p>
+        </div>
+        <div class="QUOTES">GET FREE QUOTE</div>
+        <div class="mic" style="display:flex; flex-direction: column; float: right;">
+
+            <a href="#" class="links fa fa-facebook"></a>
+            <hr data-content="AND" class="hr-text">
+            <a href="#" class="links fa fa-twitter"></a>
+            <hr data-content="AND" class="hr-text">
+            <a href="#" class="links fa fa-linkedin"></a>
+            <hr data-content="AND" class="hr-text">
+            <a href="#" class="links fa fa-instagram"></a>
+        </div>
+        <div class="bottom-nav">
+            <div class="st">
+                <i class="ff fa fa-phone"></i>
+                <p>PHONE NUMBER</p>
+                <p>1-800-506-266</p>
+                <p>1-100-777-800</p>
+            </div>
+            <div class="st">
+                <i class="ff fa fa-envelope"></i>
+                <p>CONTACT</p>
+                <p>contact@nuuk.com</p>
+                <p>info@nuuk.com</p>
+            </div>
+            <div class="st">
+                <i class="ff fa fa-clock-o"></i>
+                <p>OPENING TIMES</p>
+                <p>Mon - Sat 8:00 - 17:30, Sunday - Closed</p>
+                <p>FIND ON MAP</p>
+            </div>
+        </div>
+    </div>
+    <div id="services-section">
+        <h1 class="Our-tittle">OUR SPECIALIZATION</h1>
+        <h1 class="Services-tittle">SERVICES</h1>
+        <div class="view">
+            <p class="view-para">VIEW ALL SERVICES</p>
+            <hr data-content="AND" class="view-hover">
+        </div>
+        <div id="specialization">
+            <div class="section-specialization">
+                <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/brickwall.svg" alt="RENOVATION">
+                <p class="ss">RENOVATION</p>
+                <p class="sp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
+                    elementum
+                    tristique.</p>
+                <p class="lm">LEARN MORE</p>
+            </div>
+            <div class="section-specialization">
+                <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/set-square.svg" alt="ARCHITECTURE">
+                <p class="ss">ARCHITECTURE</p>
+                <p class="sp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
+                    elementum
+                    tristique.</p>
+                <p class="lm">LEARN MORE</p>
+            </div>
+            <div class="section-specialization">
+                <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/toolbox.svg" alt="CONSTRUCTION">
+                <p class="ss">CONSTRUCTION</p>
+                <p class="sp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
+                    elementum
+                    tristique.</p>
+                <p class="lm">LEARN MORE</p>
+            </div>
+            <div class="section-specialization">
+                <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/paint-roller.svg" alt="FINANCIAL RESULTS">
+                <p class="ss">FINANCIAL RESULTS</p>
+                <p class="sp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
+                    elementum
+                    tristique.</p>
+                <p class="lm">LEARN MORE</p>
+            </div>
+        </div>
+        <div id="ABOUT">
+            <div class="about-img">
+                <img style="width: 100%; padding: 0px;" src="https://nuuk-e3eaa.firebaseapp.com/assets/img/serv-1.jpg"
+                    alt="WHO WE ARE">
+            </div>
+            <div class="about-second">
+                <h1 class="aw">WHO WE ARE</h1>
+                <h1 class="aa">ABOUT</h1>
+                <p>Based on collective work and shared knowledge, Nuuk aims to favor dialogue and debate, to transform
+                    individual knowledge into increased creative potential.</p>
+                <p>Our studio is a architecture practice based in NY and Paris. Today, it includes 150 architects, urban
+                    planners, landscape and interior designers of 25 different nationalities. The company principle of
+                    Architecture-Studio is the collective conception. From the very beginning, the practice has believed
+                    in
+                    the virtues of exchange, crossing ideas, common effort, shred knowledge.</p>
+                <p>MEET THE TEAM</p>
+            </div>
+        </div>
+        <div id="aboutsec-data">
+            <div class="data">
+                <h1>170</h1>
+                <p>Employer with over 10 years of experience</p>
+            </div>
+            <div class="data">
+                <h1>10</h1>
+                <p>Years experience in construction industries</p>
+            </div>
+            <div class="data">
+                <h1>690</h1>
+                <p>Residential premises completed in 2019</p>
+            </div>
+            <div class="data">
+                <h1>7.1</h1>
+                <p>Milion dollar value on investments</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ............................................................................................. -->
+    <div id="PROJECTS">
+        <h1 class="ph">OUR WORK</h1>
+        <h1 class="pa">PROJECTS</h1>
+        <div class="sec-view">
+            <p class="sec-viewpara">VIEW ALL WORKS</p>
+        </div>
+        <div class="all-im " style="display: flex;">
+            <div style="width: 33%;" class="aas">
+
+                <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/p-1.jpg" width="100%" alt="">
+            </div>
+            <div style="width: 33%;" class="aas">
+
+                <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/p-4.jpg" width="100%" alt="">
+            </div>
+            <div style="width: 33%;" class="aas">
+                <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/p-3.jpg" width="100%" alt="">
+            </div>
+
+        </div>
+
+        <br>
+        <div class="all-im " style="display: flex;">
+            <div style="width: 33%;" class="aas">
+
+                <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/p-6.jpg" width="100%" alt="">
+            </div>
+            <div style="width: 33%;" class="aas">
+
+                <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/p-5.jpg" width="100%" alt="">
+            </div>
+            <div style="width: 33%;" class="aas">
+
+                <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/p-2.jpg" width="100%" alt="">
+            </div>
+
+        </div>
+        <br>
+        <br>
+        <div id="worker">
+
+            <h1 style="padding-top:6%;">LET'S MAKE SOMETHING GREAT TOGETHER</h1>
+            <p>Get in touch with us and send some basic info for a quick quote.</p>
+
+            <div style="cursor: pointer;">GET FREE QUOTE</div>
+
+
+        </div>
+        <!------pros------------>
+        <div style="height: 900px;">
+            <h1 class="ph">PROFESSIONALS</h1>
+            <h1 class="pa">TEAM</h1>
+            <div class="sec-view">
+                <p class="sec-viewpara">ABOUT US</p>
+            </div>
+            <!------profs---------------------->
+            <div class="profs">
+
+                <div class="p-1">
+
+                    <div class="p-info" style=" justify-content: bottom; height: 50x;">
+                        <h4>PHILIP BROWER</h4>
+                        <p>Managing Director</p>
+                    </div>
+                    <div class="new" style="position: relative; display:flex; flex-direction: column; float: right;">
+
+                        <a href="#" class="links fa fa-facebook"></a>
+                        <hr data-content="AND" class="hr-text">
+                        <a href="#" class="links fa fa-twitter"></a>
+                        <hr data-content="AND" class="hr-text">
+                        <a href="#" class="links fa fa-linkedin"></a>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="p-2">
+
+                    <div class="p-info" style=" justify-content: bottom; height: 50x;">
+                        <h4>JOHN WICK</h4>
+                        <p>Managing Director</p>
+                    </div>
+                    <div class="new" style="position: relative; display:flex; flex-direction: column; float: right;">
+
+                        <a href="#" class="links fa fa-facebook"></a>
+                        <hr data-content="AND" class="hr-text">
+                        <a href="#" class="links fa fa-twitter"></a>
+                        <hr data-content="AND" class="hr-text">
+                        <a href="#" class="links fa fa-linkedin"></a>
+                    </div>
+                </div>
+                <div class="p-3">
+
+                    <div class="p-info" style=" justify-content: bottom; height: 50x;">
+                        <h4>JIMMY MCGILL</h4>
+                        <p>Managing Director</p>
+                    </div>
+                    <div class="new" style="position: relative; display:flex; flex-direction: column; float: right;">
+
+                        <a href="#" class="links fa fa-facebook"></a>
+                        <hr data-content="AND" class="hr-text">
+                        <a href="#" class="links fa fa-twitter"></a>
+                        <hr data-content="AND" class="hr-text">
+                        <a href="#" class="links fa fa-linkedin"></a>
+                    </div>
+                </div>
+                <div class="p-4">
+
+                    <div class="p-info" style=" justify-content: bottom; height: 50x;">
+                        <h4>SARA CONNOR</h4>
+                        <p>Managing Director</p>
+                    </div>
+                    <div class="new" style="position: relative; display:flex; flex-direction: column; float: right;">
+
+                        <a href="#" class="links fa fa-facebook"></a>
+                        <hr data-content="AND" class="hr-text">
+                        <a href="#" class="links fa fa-twitter"></a>
+                        <hr data-content="AND" class="hr-text">
+                        <a href="#" class="links fa fa-linkedin"></a>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <!---TESTIMONIALS--->
+            <div id="testimonials" style="display: flex;">
+                <div class="left-test" style="width: 50%; ">
+                    <h1 class="ph">TESTIMONIALS</h1>
+                    <h1 class="pa">CLIENTS</h1>
+                    <div class="our-services">
+                        <p>Aenean ut eros et nisl sagittis vestibulum. Fusce neque. Praesent blandit laoreet nibh. Morbi
+                            mollis tellus ac sapien.</p>
+                    </div>
+                    <div class="our-servics-click">
+                        OUR SERVICES
+                    </div>
+                </div>
+
+                <div class="right-text" style="width: 50%; display: flex; ">
+                    <div class="riew">
+                        <div class="riew-1">
+                            <h4 class="riew-align">SARA WILLIAM</h4>
+                            <p class="riew-align">CEO at Webflow</p>
+                            <p>"Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero
+                                vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet"</p>
+                            <div class="testimonial-coma1">
+                                <div class="coma">"</div>
+                            </div>
+                        </div>
+                        <div class="riew-2">
+                            <h4 class="riew-align">JOHN JUNIOR</h4>
+                            <p class="riew-align">Manager at Complex</p>
+                            <p>"Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Cras varius. Etiam sit
+                                amet
+                                orci eget eros faucibus tincidunt. Fusce a quam"</p>
+                            <div class="testimonial-coma1">
+                                <div class="coma">"</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="riew2">
+                        <div class="riew-3">
+                            <h4 class="riew-align">RAVEN DURGAN</h4>
+                            <p class="riew-align">Architect at Group</p>
+                            <p>"Aliquam eu nunc. Cras dapibus. Vestibulum turpis sem, aliquet eget, lobortis
+                                pellentesque, rutrum eu, nisl"</p>
+                            <div class="testimonial-coma">
+                                <div class="coma">"</div>
+                            </div>
+                        </div>
+                        <div class="riew-4">
+                            <h4 class="riew-align">SAMI TYPO</h4>
+                            <p class="riew-align">SEO at Balfin</p>
+                            <p>"Vestibulum fringilla pede sit amet augue. Morbi ac felis. Ut a nisl id ante tempus
+                                hendrerit"</p>
+                            <div class="testimonial-coma">
+                                <div class="coma">"</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    <br><br><br><br><br><br>
+    <div class="news">
+        <h1 class="ph">LASTEST NEWS</h1>
+        <h1 class="pa">BLOG</h1>
+        <div class="sec-view">
+            <p class="sec-viewpara">VIEW BLOGS</p>
+        </div>
+        <div class="blogs" style="display: flex; column-gap: 20px;">
+            <div class="b-1" style="margin-left: 9%;"><img width="100%"
+                    src="https://nuuk-e3eaa.firebaseapp.com/assets/img/port-1.jpg">
+                <div class="time">
+                    <h2>17</h2>
+                    <br>
+                    <div class="date">
+                        <h2>OCT</h2>
+                    </div>
+
+                </div>
+                <div class="b-txt">
+                    <h1>Blogpost 1</h1>
+                    <p>
+                        Service and providing potential clients and customers
+                        with testimonials is one of the best ways to market.
+                    </p>
+                    <a href="#">READ MORE</a>
+                </div>
+            </div>
+            <div class="b-1">
+                <img width="100%" src="https://nuuk-e3eaa.firebaseapp.com/assets/img/port-2.jpg">
+                <div class="time">
+                    <h2>11</h2>
+                    <br>
+                    <div class="date">
+                        <h2>DEC</h2>
+                    </div>
+
+                </div>
+                <div class="b-txt">
+                    <h1>Blogpost 2</h1>
+                    <p>
+                        Service and providing potential clients and customers
+                        with testimonials is one of the best ways to market.
+                    </p>
+                    <a href="#">READ MORE</a>
+                </div>
+            </div>
+            <div class="b-1">
+                <img width="100%" src="https://nuuk-e3eaa.firebaseapp.com/assets/img/port-3.jpg">
+                <div class="time">
+                    <h2>27</h2>
+                    <br>
+                    <div class="date">
+                        <h2>OCT</h2>
+                    </div>
+
+                </div>
+                <div class="b-txt">
+                    <h1>Blogpost 3</h1>
+                    <p>
+                        Service and providing potential clients and customers
+                        with testimonials is one of the best ways to market.
+                    </p>
+                    <a href="#">READ MORE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------------------------------------------------->
+    <br><br><br><br><br>
+
+    <div class="orange-box">
+        <div class="trust">
+            <p>TRUSTED BY TOP COMPANIES</p>
+            <!-- <div class="logos" style="text-align: center;"> -->
+            <a href="">LOGO 1</a>
+            <a href="">LOGO 2</a>
+            <a href="">LOGO 3</a>
+            <a href="">LOGO 4</a>
+        </div>
+        <!-- </div> -->
+    </div>
+
+
+
+    <!---------------------------->
+    <div class="footer-2">
+        <div class="ABN">
+            <p>ABOUT NUUK
+                <hr class="abm-hr">
+            </p>
+            <p>Based on collective work and shared knowledge, Nuuk aims to favor dialogue and debate, to transform
+                individual knowledge into increased creative potential.</p>
+            <a href="#">FIND ON MAP</a>
+            <div class="abn-img">
+                <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/logo-white.png" alt="">
+            </div>
+        </div>
+        <div class="ABN">
+            <p>SERVICES
+                <hr>
+            </p>
+            <div class="sabn">
+                <a href="#">FINANCIAL RESULTS</a>
+                <a href="#">CONSTRUCTION</a>
+                <a href="#">ARCHITECTURE</a>
+                <a href="#">RENOVATION</a>
+            </div>
+        </div>
+        <div class="ABN">
+            <p>CONTACT US
+                <hr>
+            </p>
+            <i class="ff fa fa-phone"> PHONE NUMBER</i>
+            <p>1-800-506-266</p>
+            <i class="ff fa fa-clock-o"> OPENING TIMES</i>
+            <p>Mon - Sat 8:00 - 17:30, Sunday - Closed</p>
+            <i class="ff fa fa-envelope"> CONTACT</i>
+            <p>contact@nuuk.com</p>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
